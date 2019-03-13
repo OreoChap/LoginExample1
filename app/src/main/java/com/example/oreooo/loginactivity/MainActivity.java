@@ -4,6 +4,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mPhoneNumberEditText = (EditText) findViewById(R.id.phoneNumberEditText);
         mPassWordEditText = (EditText) findViewById(R.id.passwordEditText);
+        mPassWordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
         mLoginButton = (Button) findViewById(R.id.loginButton);
     }
 
